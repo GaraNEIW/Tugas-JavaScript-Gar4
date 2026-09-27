@@ -27,9 +27,12 @@ function konversiGrade(nilai) {
     return "D";
 };
 
-console.log("--- Rincian Grade Mata Kuliah ---");
+console.log("------ DATA NILAI GARA ------");
+let rataRata = hitungRataRata(dataNilaiKu);
+console.log(`Rata-rata Nilai: ${rataRata.toFixed(2)}\n`);
 
+console.log("--- Rincian Grade Mata Kuliah ---");
 dataNilaiKu.forEach(item => {
-    let huruf = konversiGrade(item.nilai); 
+    let huruf = konversiGrade(item.nilai);
     console.log(`${item.namaMK}: ${item.nilai} (Grade ${huruf})`);
 });
